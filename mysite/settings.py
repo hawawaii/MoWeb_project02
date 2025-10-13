@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media/"
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+    # 'rest_framework.permissions.IsAdminUser’,
+    # ㄴ주석 처리된 부분을 사용하면 admin 사용자일 때만 접근이 가능
+    ],
+    'PAGE_SIZE': 10
+ }
